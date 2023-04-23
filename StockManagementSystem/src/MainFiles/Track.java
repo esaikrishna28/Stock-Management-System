@@ -34,19 +34,14 @@ public class Track extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        bid = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel2.setText("Search Date");
-
-        bid.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         table.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         table.setModel(new javax.swing.table.DefaultTableModel(
@@ -54,7 +49,7 @@ public class Track extends javax.swing.JFrame {
 
             },
             new String [] {
-                "billno", "item_id", "item_name", "quntatity", "price", "date"
+                "billno", "date", "item_id", "item_name", "quantity", "price"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -77,8 +72,10 @@ public class Track extends javax.swing.JFrame {
             table.getColumnModel().getColumn(5).setMinWidth(150);
         }
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 170, 880, 281));
+
         jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getStyle() | java.awt.Font.BOLD, jButton1.getFont().getSize()+11));
-        jButton1.setText("Search");
+        jButton1.setText("view sales");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,6 +87,7 @@ public class Track extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 42, 159, -1));
 
         jButton2.setFont(jButton2.getFont().deriveFont(jButton2.getFont().getStyle() | java.awt.Font.BOLD, jButton2.getFont().getSize()+11));
         jButton2.setText("Back");
@@ -104,82 +102,58 @@ public class Track extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, 95, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(bid, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 465, Short.MAX_VALUE))))))
-                .addContainerGap(24, Short.MAX_VALUE))
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 920, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(bid, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(30, 30, 30)
-                .addComponent(jButton1)
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
-                .addGap(39, 39, 39))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 510, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-              String ii=bid.getText();
-         DefaultTableModel model = (DefaultTableModel) table.getModel();
+            //  String ii=bid.getText();
+         //DefaultTableModel model = (DefaultTableModel) table.getModel();
            try {
-            Class.forName("java.sql.DriverManager");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/fs", "root", "");
+           // Class.forName("java.sql.DriverManager");
+           // Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/java_stock", "root", "");
 
-            Statement stmt = con.createStatement();
-             String query = "select * from bill where date='"+ii+"' ";
-            ResultSet rs=stmt.executeQuery(query);
+            //Statement stmt = con.createStatement();
+           //  String query = "select * from bill where date='"+ii+"' ";
+           // ResultSet rs=stmt.executeQuery(query);
 
-            while(rs.next()) {
-                String mfd = rs.getString("biilno");
-                String id = rs.getString("item_id");
-                String name = rs.getString("item_name");
-                String qun = rs.getString("quantity");
-                 String price = rs.getString("price");
+            //while(rs.next())
+            {
+             //   String mfd = rs.getString("biilno");
+               // String id = rs.getString("item_id");
+                //String name = rs.getString("item_name");
+                //String qun = rs.getString("quantity");
+                 //String price = rs.getString("price");
                 
                 
-                String exp = rs.getString("date");
+                //String exp = rs.getString("date");
                // String batchno = rs.getString("batchno");
                 
                 
 
-               model.addRow(new Object[] {mfd,id,name,qun,price,exp});
+               //model.addRow(new Object[] {mfd,id,name,qun,price,exp});
             }
-            rs.close();
+            //rs.close();
             //stmt.close();
             //con.close();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
+            //JOptionPane.showMessageDialog(this, e.getMessage());
             //e.printStackTrace();
         }
 
@@ -192,7 +166,39 @@ public class Track extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+   
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        try {
+            Class.forName("java.sql.DriverManager");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/fs", "root", "");
+            Statement stmt = con.createStatement();
+             String query = "select * from track";
+              ResultSet rs=stmt.executeQuery(query);
+             while(rs.next()) {
+                 String ubill=rs.getString("billno");
+                 String udate=rs.getString("date");
+                 String uid=rs.getString("item_id");
+                 String uname=rs.getString("item_name");
+                 String uquantity=rs.getString("quantity");
+                 String uprice=rs.getString("price");
+                 String utotprice=rs.getString("totprice");
+                 
+                 model.addRow(new Object[] {ubill,udate,uid,uname,uquantity,uprice,utotprice});
+             }
+             rs.close();
+                
+             }catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            //e.printStackTrace();
+        }
  
+            
+            
+            
+            
+            
+        
+        
 
  
 // TODO add your handling code here:
@@ -246,10 +252,9 @@ public class Track extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField bid;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables

@@ -54,8 +54,12 @@ public class bill extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        billno = new javax.swing.JTextField();
+        date = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -81,20 +85,28 @@ public class bill extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setMinWidth(140);
         }
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 111, 981, 275));
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Bill No:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 30, 71, 28));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("Date:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 32, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(938, 32, 239, 37));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel5.setText("Total Amount:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 410, 149, 39));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton1.setText("Generate Invoice");
@@ -103,6 +115,7 @@ public class bill extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 481, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton2.setText("HOME");
@@ -111,67 +124,30 @@ public class bill extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(349, 349, 349)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(jLabel5)
-                        .addGap(51, 51, 51)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(411, 411, 411)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(98, Short.MAX_VALUE))
+        billno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                billnoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(billno, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 30, 130, 30));
+        getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, 160, 30));
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 102));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1040, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,7 +159,7 @@ public class bill extends javax.swing.JFrame {
             Class.forName("java.sql.DriverManager");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/fs", "root", "");
              Statement stmt = con.createStatement();
-            String query = "select item_id,item_name,quantity,price,totprice,MAX(biilno),date from bill";
+            String query = "select item_id,item_name,quantity,price,totprice from bill";
         ResultSet rs = stmt.executeQuery(query);
                 {
             while (rs.next()) {
@@ -194,10 +170,10 @@ public class bill extends javax.swing.JFrame {
                 
                 String mfd = rs.getString("totprice");
                 
-                String bill = rs.getString("MAX(biilno)");
-                String date = rs.getString("date");
-                jLabel2.setText(bill);
-                jLabel4.setText(date);
+                //String bill = rs.getString("MAX(biilno)");
+                //String date = rs.getString("date");
+                //jLabel2.setText(bill);
+                //jLabel4.setText(date);
                 model.addRow(new Object[] {id,name,qun,price,mfd});
             }
             //stmt.close();
@@ -213,7 +189,10 @@ public class bill extends javax.swing.JFrame {
     sum=sum+Integer.parseInt(jTable1.getValueAt(i,4).toString());
      }
 jLabel6.setText(Integer.toString(sum));
-        MessageFormat header =new MessageFormat("Invoice Print");
+
+        String ubillno=billno.getText();
+        String udate=date.getText();
+        MessageFormat header =new MessageFormat("  BILLNO:'"+ubillno+"'        Invoice Print         DATE:'"+udate+"'       ");
          MessageFormat footer =new MessageFormat("Page");
         try {
             jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer);
@@ -222,15 +201,121 @@ jLabel6.setText(Integer.toString(sum));
         } catch (PrinterException ex) {
             Logger.getLogger(bill.class.getName()).log(Level.SEVERE, null, ex);
         }
-   
+        
+        
+        
+        try{
+             Class.forName("java.sql.DriverManager");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/fs", "root", "");
+             Statement stmt = con.createStatement();
+            //DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+            for (int i=0;i<jTable1.getRowCount();i++){
+                
+            
+            String a=model.getValueAt( i,0).toString();
+            String b=model.getValueAt( i,1).toString();
+            String c=model.getValueAt( i,2).toString();
+            String d=model.getValueAt( i,3).toString();
+            String e=model.getValueAt( i,4).toString();
+            
+            String query2="insert into track(billno,date,item_id,item_name,quantity,price,totprice) values ('"+ubillno+"','"+udate+"','"+a+"','"+b+"','"+c+"','"+d+"','"+e+"')";
+                Statement smtnew=con.createStatement();
+                int success=smtnew.executeUpdate(query2);
+                
+            }
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    
+        
+        
+        workWithDatabase();
+
+        
+        
+        
+        
+        
+        
+        
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
+     public void workWithDatabase()
+    {
+        Connection c=null;
+         Statement  s=null;
+         ResultSet rs1=null;
+         int flag=0;
+         try{
+             
+        Class.forName("com.mysql.jdbc.Driver");
+       c=DriverManager.getConnection("jdbc:mysql://localhost/java_stock","root","");
+       s=c.createStatement();
+
+  DefaultTableModel model = (DefaultTableModel) jTable1.getModel();   
+                for(int i=0;i<jTable1.getRowCount();i++)
+                {
+               // int selectedRowIndex =jTable1.getSelectedRow();
+           
+          String a=model.getValueAt(i,0).toString();
+         
+            String c1=model.getValueAt(i,2).toString();
+            
+   
+              String s1=a;
+        
+   //  rs1 = s.executeQuery ("select quantity from  inventory where item_id="+"'"+s1+"'");
+        
+         int id=Integer.parseInt(c1);
+    rs1 = s.executeQuery ("select quantity from  inventory where item_id="+"'"+s1+"'");
+    
+       
+   // jLabel6.setText(s1);
+           
+             while(rs1.next()) {
+                  String id1=rs1.getString("quantity");
+                  int id2=Integer.parseInt(id1);
+        
+                 int id3=id2-id;
+               s.executeUpdate("Update inventory set quantity="+id3+" where item_id="+"'"+s1+"'");
+       
+           }
+         /*     while(rs1.next())
+       {
+               String quantity1=rs1.getString("quantity");
+               String q3 = quantity1;
+               
+              
+         }*/
+         
+             rs1.close();
+    
+             
+                  
+                }          
+}
+ catch(SQLException | ClassNotFoundException e1)
+         {
+             System.out.println(e1);
+         }
+//  String b=jLabel2.getText();
+    }
+    
+    
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 this.setVisible(false);
         mainFrame mm=new mainFrame();
         mm.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void billnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_billnoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,6 +349,8 @@ this.setVisible(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField billno;
+    private javax.swing.JTextField date;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -272,6 +359,7 @@ this.setVisible(false);
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
